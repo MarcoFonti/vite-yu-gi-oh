@@ -6,3 +6,4 @@ export const store = reactive({
     pokemons: [],
     loading: false
 });
+
