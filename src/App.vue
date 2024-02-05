@@ -43,4 +43,9 @@ export default {
 <!-- CSS -->
 <style>
 
+/* BODY */
+body {
+    height: 100vh;
+}
+
 </style>
