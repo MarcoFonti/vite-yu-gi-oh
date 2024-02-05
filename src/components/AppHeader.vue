@@ -7,11 +7,14 @@ export default {
     name: 'AppHeader',
       
 };
+
 </script>
 
 <!-- HTML -->
 <template>
+    <!-- HEADER -->
     <header id="recipe-header">
+        <!-- TITOLO -->
         <h1>pokemon</h1>
     </header>
 </template>
@@ -19,10 +22,12 @@ export default {
 <!-- CSS -->
 <style lang="scss" scoped>
 
+/* RECIPENTE HEADER */
 #recipe-header {
     display: flex;
     background-color: #ffa500;
 
+    /* TITOLO */
     h1 {
         text-transform: uppercase;
         font-size: 50px;

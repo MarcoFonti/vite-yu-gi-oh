@@ -19,7 +19,7 @@ export default {
     name: 'MyApp',
     // COMPONENTI
     components: { AppHeader, AppMain, AppFooter },
-    // ALL'AVIO DELLA PAGINA
+    // ALL'AVVIO DELLA PAGINA
     created() {
         axios.get(endpoint).then(res => {
             store.pokemons = res.data.docs
