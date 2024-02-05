@@ -25,7 +25,7 @@ export default {
     <!-- MAIN -->
     <main>
         <!-- LOADING -->
-        <h1 v-if="store.loading">Loading...</h1>
+        <h1 v-if="store.loading === true">Loading...</h1>
         <!-- SEZIONE POKEDEX -->
         <section v-else id="recipe-pokedex">
             <!-- TITOLO -->
