@@ -13,17 +13,24 @@ import { store } from './data/store';
 import axios from 'axios';
 // VARIBILE API
 const endpoint = 'https://41tyokboji.execute-api.eu-central-1.amazonaws.com/dev/api/v1/pokemons';
+import { SelectMenu } from './assets/dataNotAPI';
 
 
 export default {
     // NOME
     name: 'MyApp',
+    data: () => ({
+        SelectMenu
+    }),
     // COMPONENTI
     components: { AppHeader, AppMain, AppFooter },
     // ALL'AVVIO DELLA PAGINA
     created() {
         axios.get(endpoint).then(res => {
+            store.loading = true
             store.pokemons = res.data.docs
+        }).then(()=> {
+            store.loading = false
         })
     }
    
@@ -36,7 +43,7 @@ export default {
     <!-- HEADER -->
     <AppHeader/>
     <!-- MAIN -->
-    <AppMain/>
+    <AppMain :SelectMenu="SelectMenu"/>
     <!-- FOOTER -->
     <AppFooter/>
 </template>
