@@ -12,7 +12,7 @@ export default {
     emits: ['select-menu'],
     // PROPS
     props: {
-        Selects: Array
+        options: Array
     }
       
 };
@@ -21,29 +21,32 @@ export default {
 
 <!-- HTML -->
 <template>
-    <!-- SELECT -->
-    <form @submit.prevent="$emit('select-menu', menu)" >
-        <select v-model="menu">
+    <div>
+        <!-- SELECT -->
+        <select v-model="menu" @change="$emit('select-menu', menu)">
             <option>--</option>
-            <option v-for="(select, i) in Selects" :key="i">{{ select }}</option>
+            <option v-for="(select, i) in options" :key="i">{{ select }}</option>
         </select>
-    </form>
+    </div>
 </template>
 
 <!-- CSS -->
 <style lang="scss" scoped>
 
-/* FORM */
-form {
+/* CONTENITORE */
+div {
+
     display: flex;
     justify-content: flex-end;
-    margin: 20px;
+    background-color: red;
+    padding: 10px;
 
     /* SELECT */
     select {
         width: 100px;
         height: 30px;
+        margin-top: 10px;
     }
-}
 
+}
 </style>

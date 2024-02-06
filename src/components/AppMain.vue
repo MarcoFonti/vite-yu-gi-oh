@@ -5,28 +5,17 @@
 import Pokédex from './Pokédex.vue'
 // IMPORTO STORE
 import { store } from '../data/store';
-// IMPORTO SELECTMENU
-import SelectMenu from './SelectMenu.vue';
+
 
 export default {
     // NOME
     name: 'AppMain',
     // COMPONENTI
-    components: { Pokédex, SelectMenu },
+    components: { Pokédex },
     // DATI
     data:() => ({
-        store
+        store,
     }),
-    // PROPS
-    props: {
-        Selects: Array
-    },
-    // FUNZIONI
-    methods: {
-        pokemonChoice(menu) {
-            console.log('scelto: ' + menu)
-        }
-    }
     
 };
 
@@ -40,8 +29,6 @@ export default {
         <h1 v-if="store.loading">Loading...</h1>
         <!-- SEZIONE POKEDEX -->
         <section v-else id="recipe-pokedex">
-            <!-- SELECTMENU -->
-            <SelectMenu @select-menu="pokemonChoice" :Selects="Selects"/>
             <!-- TITOLO -->
             <h2>pokedex</h2>
             <!-- RECIPIENTE POKEMONS -->
