@@ -1,3 +1,3 @@
-import SelectMenu from './_select-menu'
+import Selects from './_select-menu'
 
-export { SelectMenu };
+export { Selects };

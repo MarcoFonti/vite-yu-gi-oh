@@ -12,7 +12,7 @@ export default {
     emits: ['select-menu'],
     // PROPS
     props: {
-        SelectMenu: Array
+        Selects: Array
     }
       
 };
@@ -25,7 +25,7 @@ export default {
     <form @submit.prevent="$emit('select-menu', menu)" >
         <select v-model="menu">
             <option>--</option>
-            <option v-for="(select, i) in SelectMenu" :key="i">{{ select }}</option>
+            <option v-for="(select, i) in Selects" :key="i">{{ select }}</option>
         </select>
     </form>
 </template>

@@ -13,14 +13,14 @@ import { store } from './data/store';
 import axios from 'axios';
 // VARIBILE API
 const endpoint = 'https://41tyokboji.execute-api.eu-central-1.amazonaws.com/dev/api/v1/pokemons';
-import { SelectMenu } from './assets/dataNotAPI';
+import { Selects } from './assets/dataNotAPI';
 
 
 export default {
     // NOME
     name: 'MyApp',
     data: () => ({
-        SelectMenu
+        Selects
     }),
     // COMPONENTI
     components: { AppHeader, AppMain, AppFooter },
@@ -43,7 +43,7 @@ export default {
     <!-- HEADER -->
     <AppHeader/>
     <!-- MAIN -->
-    <AppMain :SelectMenu="SelectMenu"/>
+    <AppMain :Selects="Selects"/>
     <!-- FOOTER -->
     <AppFooter/>
 </template>

@@ -19,7 +19,7 @@ export default {
     }),
     // PROPS
     props: {
-        SelectMenu: Array
+        Selects: Array
     },
     // FUNZIONI
     methods: {
@@ -41,7 +41,7 @@ export default {
         <!-- SEZIONE POKEDEX -->
         <section v-else id="recipe-pokedex">
             <!-- SELECTMENU -->
-            <SelectMenu @select-menu="pokemonChoice" :SelectMenu="SelectMenu"/>
+            <SelectMenu @select-menu="pokemonChoice" :Selects="Selects"/>
             <!-- TITOLO -->
             <h2>pokedex</h2>
             <!-- RECIPIENTE POKEMONS -->
