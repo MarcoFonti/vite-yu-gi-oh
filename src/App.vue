@@ -2,7 +2,7 @@
 <script>
 
 //IMPORTO HEADER
-import AppHeader from './components/Appheader.vue'
+import AppHeader from './components/AppHeader.vue'
 // IMPORTO MAIN
 import AppMain from './components/AppMain.vue';
 // IMPORTO FOOTER
