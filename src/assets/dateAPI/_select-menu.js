@@ -1,3 +1,5 @@
+
+/* ESPORTAZIONE DATI DELLA SELECT */
 export default [
     "Bug",
     "Dark",

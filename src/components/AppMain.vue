@@ -1,51 +1,64 @@
 <!-- JS -->
 <script>
 
-// IMPORTO POKEDEX
+
+/* IMPORTO POKEDEX */
 import Pokédex from './Pokédex.vue'
-// IMPORTO STORE
-import { store } from '../data/store';
+/* IMPORTO STORE */
+import { store } from '../date/store';
 
 
+/* ESPORTAZIONE */
 export default {
-    // NOME
+
+
+    /* NOME PAGINA */
     name: 'AppMain',
-    // COMPONENTI
+
+
+    /* COMPONENTI */
     components: { Pokédex },
-    // DATI
-    data:() => ({
+
+
+    /* DATI DI BASE DA UTILIZZARE NEL TEMPLATE */
+    data: () => ({
+
+
+        /* RECUPERO STORE */
         store,
     }),
-    
+
 };
 
 </script>
 
 <!-- HTML -->
 <template>
+
     <!-- MAIN -->
     <main>
-        <!-- LOADING -->
+        <!-- SE STORE.LOADING E' TRUE -->
         <h1 v-if="store.loading">Loading...</h1>
-        <!-- SEZIONE POKEDEX -->
+        <!-- ALTRIMENTI SEZIONE POKEDEX -->
         <section v-else id="recipe-pokedex">
             <!-- TITOLO -->
             <h2>pokedex</h2>
             <!-- RECIPIENTE POKEMONS -->
             <div class="recipe-pokemons">
                 <!-- POKEDEX -->
-                <Pokédex/>
+                <Pokédex />
             </div>
         </section>
     </main>
+
 </template>
+
 
 <!-- CSS -->
 <style lang="scss" scoped>
-
 /* LOADING  */
 h1 {
-        text-align: center;
+    text-align: center;
 }
 
 /* RECIPIENTE POKEDEX */
@@ -74,5 +87,4 @@ h1 {
     border: 1px solid;
     margin: 10px;
 }
-
 </style>

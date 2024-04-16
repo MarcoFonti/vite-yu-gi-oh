@@ -1,16 +1,21 @@
 <!-- JS -->
 <script>
 
+
+/* ESPORTAZIONE */
 export default {
-    // NOME
+
+
+    /* NOME PAGINA */
     name: 'AppFooter',
-    
+
 };
 
 </script>
 
 <!-- HTML -->
 <template>
+
     <!-- FOOTER -->
     <footer>
         <ul>
@@ -19,11 +24,11 @@ export default {
             <li>Classifica</li>
         </ul>
     </footer>
+
 </template>
 
 <!-- CSS -->
 <style scoped lang="scss">
-
 /* LISTA */
 ul {
     display: flex;
@@ -41,5 +46,4 @@ ul {
         border-bottom: 1px solid;
     }
 }
-
 </style>

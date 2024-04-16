@@ -2,26 +2,32 @@
 <script>
 
 
+/* ESPORTAZIONE */
 export default {
-    // NOME
+
+
+    /* NOME PAGINA */
     name: 'AppHeader',
-      
+
 };
 
 </script>
 
+
 <!-- HTML -->
 <template>
+
     <!-- HEADER -->
     <header id="recipe-header">
         <!-- TITOLO -->
         <h1>pokemon</h1>
     </header>
+
 </template>
+
 
 <!-- CSS -->
 <style lang="scss" scoped>
-
 /* RECIPENTE HEADER */
 #recipe-header {
     display: flex;
@@ -38,7 +44,6 @@ export default {
         -webkit-text-stroke: 2px #000000;
         padding: 20px;
     }
-    
-}
 
+}
 </style>
